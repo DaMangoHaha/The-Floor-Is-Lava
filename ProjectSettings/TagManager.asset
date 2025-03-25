@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Popo
+  - Domino
+  - Platform
   layers:
   - Default
   - TransparentFX

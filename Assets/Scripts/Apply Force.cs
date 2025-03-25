@@ -2,17 +2,23 @@ using UnityEngine;
 
 public class LaunchSphere : MonoBehaviour
 {
-    public float launchForce = 10f; // How strong the launch force is
+    public float launchForce = 10f; // Adjust force for desired strength
+    public float angle = 45f; // Launch angle in degrees
 
-    private void OnCollisionEnter(Collision collision)
+    private Rigidbody rb;
+
+    void Start()
     {
-        // Checks if Popo has a Rigidbody
-        Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            // Apply an upward force to Popo, sending him up
-            rb.linearVelocity = Vector3.zero; // Resets Popo's velocity before applying force
-            rb.AddForce(Vector3.up * launchForce, ForceMode.Impulse);
-        }
+        rb = GetComponent<Rigidbody>();
+    }
+
+    public void Launch()
+    {
+        // Convert the angle to radians and calculate the direction
+        float radians = angle * Mathf.Deg2Rad;
+        Vector3 launchDirection = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0);
+
+        // Apply force to launch the sphere in an arc
+        rb.AddForce(launchDirection * launchForce, ForceMode.Impulse);
     }
 }
