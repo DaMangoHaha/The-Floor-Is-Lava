@@ -12,9 +12,9 @@ public class PlaySoundClank : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Popo")) // Check if Popo hits the domino
+        if (collision.gameObject.CompareTag("Ice Chunk")) // Check if the ice hits the domino
         {
-            audioSource.Play(); // Plays sound when Popo knocks into the domino
+            audioSource.Play(); // Plays sound when the ice knocks into the domino
         }
     }
 }
