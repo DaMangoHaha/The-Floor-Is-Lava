@@ -30,7 +30,7 @@ public class FinalDomino : MonoBehaviour
             {
                 launchSound.Play();
             }
-            Debug.Log("Nana's blasing off again!");
+            Debug.Log("Nana's blasting off again!");
         }
     }
 }

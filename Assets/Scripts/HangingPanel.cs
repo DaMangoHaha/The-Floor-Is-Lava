@@ -3,27 +3,24 @@ using UnityEngine;
 public class HangingPanel : MonoBehaviour
 {
     private Rigidbody rb;
-    public float swingForce = 10f;
+    public float swingForce = 10f; // Increase if needed
     public Color newColor = Color.red;
 
     private Renderer panelRenderer;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        panelRenderer = GetComponent<Renderer>();
+        rb = GetComponent<Rigidbody>(); // Get Rigidbody
+        panelRenderer = GetComponent<Renderer>(); // Get Renderer
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // Use OnTriggerEnter for trigger-based detection
     {
-        if (other.CompareTag("Popo"))
+        if (other.CompareTag("Popo")) // Ensure Sphere has the correct tag
         {
-            panelRenderer.material.color = newColor;
-
-            Vector3 forceDirection = transform.right * swingForce;
-            rb.AddTorque(forceDirection, ForceMode.Impulse);
-
-            Debug.Log("Panel triggered! Changing color & swinging.");
+            panelRenderer.material.color = newColor; // Change panel color
+            rb.AddTorque(Vector3.forward * swingForce, ForceMode.Impulse); // Apply rotational force
+            Debug.Log("Panel triggered! Changing color.");
         }
     }
 }
