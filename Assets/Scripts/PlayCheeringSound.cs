@@ -13,7 +13,7 @@ public class PlayCheeringSound : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Checks if the object Popo collided with Nana
-        if (collision.gameObject.CompareTag("Popo"))
+        if (collision.gameObject.CompareTag("Nana"))
         {
             // Play the cheering sound
             audioSource.Play();
