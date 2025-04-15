@@ -2,21 +2,23 @@ using UnityEngine;
 
 public class PlayCheeringSound : MonoBehaviour
 {
-    private AudioSource audioSource;
-
+    [Header("Cheering Sound")]
+    public AudioSource cheerSource;
     void Start()
     {
-        // Gets the AudioSource attached to this object
-        audioSource = GetComponent<AudioSource>();
+        AudioSource[] sources = GetComponents<AudioSource>();
+        cheerSource = sources[1];
     }
+
 
     void OnCollisionEnter(Collision collision)
     {
-        // Checks if the object Popo collided with Nana
         if (collision.gameObject.CompareTag("Nana"))
         {
-            // Play the cheering sound
-            audioSource.Play();
+            if (cheerSource != null && !cheerSource.isPlaying)
+            {
+                cheerSource.Play();
+            }
         }
     }
 }

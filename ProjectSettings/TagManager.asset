@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Ice Chunk
   - Nana
+  - Panel
   layers:
   - Default
   - TransparentFX
