@@ -521,16 +521,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'ENTRY_NUMBER_1
 
-    
+
 
     IS THIS THING ON? I CAN''T TELL.
 
-    
 
-    POPO
-    HAS BEEN SEPERATED FROM NANA.
 
-    
+    POPO HAS
+    BEEN SEPERATED FROM NANA.
+
+
 
     WE NEED TO KEEP IT THIS WAY.'
   m_isRightToLeft: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 8.85
@@ -575,8 +575,8 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 3
-  m_wordWrappingRatios: 0.4
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
@@ -1487,7 +1487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 704022983}
-  wingdingMessage: ENTRY_NUMBER_1 POPO HAS BEEN SEPERATED FROM NANA.
+  wingdingMessage: ENTRY_NUMBER_1 - IS THIS THING ON... I CAN'T TELL. POPO HAS BEEN
+    SEPERATED FROM NANA. WE NEED TO KEEP IT THIS WAY.
   delay: 0.25
   audioSource: {fileID: 2034861478}
   typeSounds:

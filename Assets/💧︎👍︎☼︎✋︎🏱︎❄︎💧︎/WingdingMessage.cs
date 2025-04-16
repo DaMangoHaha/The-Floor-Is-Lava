@@ -5,7 +5,10 @@ using System.Collections;
 public class WingdingMessage : MonoBehaviour
 {
     public TextMeshProUGUI messageText;
-    public string wingdingMessage = "ENTRY_NUMBER_1\r\n\r\nIS THIS THING ON? I CAN'T TELL.\r\n\r\nPOPO HAS BEEN SEPERATED FROM NANA.\r\n\r\nWE NEED TO KEEP IT THIS WAY."; // Replace with your actual message
+    public string wingdingMessage = "ENTRY_NUMBER_1\n\n" +
+        "IS THIS THING ON? I CAN'T TELL." +
+        "\n\nPOPO HAS BEEN SEPERATED FROM NANA." +
+        "\n\nWE NEED TO KEEP IT THIS WAY."; // Replace with your actual message
     public float delay = 0.2f;
     public AudioSource audioSource;
     public AudioClip[] typeSounds; // Drag your 7 sounds here
